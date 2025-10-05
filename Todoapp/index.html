@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+    <title>Todo App</title>
+
+    <style>
+      /* Fullscreen loader style */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+        letter-spacing: 3px;
+      }
+
+      .spinner {
+        border: 3px solid #ccc;
+        border-top: 3px solid #00bcd4;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 15px;
+        
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <h2> Loading...</h2>
+    </div>
+
+    <!-- React Root -->
+    <div id="root" style="display:none;"></div>
+
+    <script>
+      // Wait 3 seconds, then show React app
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("root").style.display = "block";
+      }, 3000);
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

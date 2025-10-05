@@ -1,0 +1,66 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.todo-item .completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Buttons */
+.todo-item .delete-btn,
+.todo-item .edit-btn {
+  font-size: 0.9rem; /* smaller size */
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.todo-item .edit-btn {
+  background: linear-gradient(135deg,#38f9d7,#43e97b);
+  color: #000;
+  margin-right: 6px;
+}
+
+.todo-item .edit-btn:hover {
+  transform: scale(1.1);
+}
+
+.todo-item .delete-btn {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.todo-item .delete-btn:hover {
+  background: #d9363e;
+}
+
+/* Category and due */
+.category {
+  margin-left: 8px;
+  color: #38f9d7;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.due {
+  margin-left: 8px;
+  color: #ff4d4f;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
