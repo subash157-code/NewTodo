@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "../components/AddTodoForm.css";
+import "./AddTodoForm.css";
 
 export default function AddTodoForm({ onAdd, onClose }) {
   const {
